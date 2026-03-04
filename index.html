@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tempe Align Solutions – AI Clear Aligners for Dentists | Tempe, AZ</title>
+    <meta name="description" content="Affordable, AI-powered clear aligners for Arizona dentists. High-quality Zendura FLX material, BlueSkyPlan AI design, and flexible per-case pricing.">
+    <meta name="keywords" content="clear aligners for dentists Arizona, affordable Invisalign alternative Tempe, B2B clear aligners, Zendura FLX aligners, digital dentistry Arizona, dental lab Tempe">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for easy theming */
+        :root {
+            --primary: #007B8F; /* Teal */
+            --primary-hover: #005F6E;
+            --secondary: #0A2540; /* Navy */
+            --accent: #E0F2F1; /* Light mint/teal */
+            --bg-light: #F8FAFC;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+            --font-main: 'Inter', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-family: var(--font-main);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        body {
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--secondary);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* CSS-Only Mobile Menu */
+        .menu-toggle {
+            display: none;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--accent) 100%);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid var(--border);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .how-it-works h2 {
+            color: var(--white);
+            margin-bottom: 50px;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .step h4 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #94A3B8;
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            background: var(--white);
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 20px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 20px 0 30px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--bg-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Tech & Materials */
+        .tech-section {
+            background-color: var(--bg-light);
+        }
+
+        .tech-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .tech-text {
+            flex: 1;
+        }
+
+        .tech-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .tech-text li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .author {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-style: normal;
+        }
+
+        .author-info h5 {
+            color: var(--secondary);
+            margin-bottom: 2px;
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* About Us */
+        .about-section {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Contact & Footer */
+        .contact-section {
+            background-color: var(--bg-light);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: var(--font-main);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--accent);
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #051626;
+            color: #94A3B8;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-text h1 { font-size: 2.5rem; }
+            .pricing-card.popular { transform: none; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: -1;
+            }
+
+            .menu-toggle:checked ~ .nav-links {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .hero-content, .tech-content, .contact-container {
+                flex-direction: column;
+            }
+
+            .hero-text { text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .steps-container { flex-direction: column; gap: 40px; }
+            .contact-form, .contact-info { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Tempe<span>Align</span></div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#technology">Materials</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="color: white;">Book Demo</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Affordable, AI-Powered Clear Aligners for Arizona Dentists</h1>
+                <p>Fast AI designs powered by BlueSkyPlan + premium Zendura FLX quality. Elevate your practice with our flexible, per-case pricing starting at just $250.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Submit Your First Case Free</a>
+                    <a href="#pricing" class="btn btn-outline">See Pricing</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Modern dental office with digital dentistry equipment">
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Why Partner With Tempe Align Solutions?</h2>
+            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">A fast, affordable, local alternative to big brands.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon-circle">AI</div>
+                    <h3>Accelerated AI Design</h3>
+                    <p>Setup approvals ready in hours, not days. We leverage BlueSkyPlan AI for highly accurate, predictable tooth movements.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-circle">Z</div>
+                    <h3>Premium Zendura FLX</h3>
+                    <p>Manufactured with industry-leading dual-shell material for superior patient comfort, clarity, and continuous force retention.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-circle">$</div>
+                    <h3>Flexible B2B Pricing</h3>
+                    <p>Strictly per-case or tiered pricing. No subscription traps, no hidden lab fees. Maximizing your practice's profit margin.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-circle">AZ</div>
+                    <h3>Local Tempe Turnaround</h3>
+                    <p>Based right here in Arizona. Skip the long international shipping times and get aligners in your patients' hands faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section-padding how-it-works">
+        <div class="container">
+            <h2 class="text-center">Streamlined Clinical Workflow</h2>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Submit Scans & Rx</h4>
+                    <p>Upload your STL files, patient photos, and treatment goals through our secure portal.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>AI Generates Setup</h4>
+                    <p>Review and approve the 3D digital treatment plan sent directly to your inbox.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Local Manufacturing</h4>
+                    <p>We 3D print and thermoform using premium Zendura FLX in our certified lab network.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Fast Delivery</h4>
+                    <p>Receive beautifully packaged, ready-to-deliver aligners right at your Arizona practice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Transparent, Per-Case Pricing</h2>
+            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">High-quality clinical outcomes without the premium brand markup.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Mild Case</h3>
+                    <p style="color: var(--text-muted);">Up to 10 aligners per arch</p>
+                    <div class="price">$250<span>/case</span></div>
+                    <ul class="pricing-features">
+                        <li>BlueSkyPlan AI Setup</li>
+                        <li>Zendura FLX Material</li>
+                        <li>1 Free Refinement</li>
+                        <li>Local AZ Shipping</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Select Mild</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Moderate Case</h3>
+                    <p style="color: var(--text-muted);">Up to 20 aligners per arch</p>
+                    <div class="price">$400<span>/case</span></div>
+                    <ul class="pricing-features">
+                        <li>BlueSkyPlan AI Setup</li>
+                        <li>Zendura FLX Material</li>
+                        <li>2 Free Refinements</li>
+                        <li>Local AZ Shipping</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Moderate</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Comprehensive</h3>
+                    <p style="color: var(--text-muted);">Unlimited aligners</p>
+                    <div class="price">$600<span>/case</span></div>
+                    <ul class="pricing-features">
+                        <li>BlueSkyPlan AI Setup</li>
+                        <li>Zendura FLX Material</li>
+                        <li>Unlimited Refinements (3 yrs)</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Select Comprehensive</a>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <p>Need volume discounts or a custom workflow? <a href="#contact">Contact us for a custom quote.</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="section-padding tech-section">
+        <div class="container tech-content">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1598331668826-20cefac91e48?auto=format&fit=crop&w=800&q=80" alt="Clear aligners and digital dental scan">
+            </div>
+            <div class="tech-text">
+                <h2>Cutting-Edge Tech Meets Premium Materials</h2>
+                <p style="margin-top: 20px;">We don't compromise on clinical quality. By pairing the smartest digital dentistry software with top-tier thermoforming plastics, we ensure predictable results.</p>
+                
+                <ul>
+                    <li>
+                        <div class="icon-circle" style="width: 40px; height: 40px; font-size: 1rem; margin: 0;">1</div>
+                        <div>
+                            <h4>BlueSkyPlan AI Integration</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Automated, highly accurate tooth segmentation and staging ensures safe, biomechanically sound movement plans in record time.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-circle" style="width: 40px; height: 40px; font-size: 1rem; margin: 0;">2</div>
+                        <div>
+                            <h4>Zendura™ FLX Premium Material</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">The gold standard in clear aligner materials. Its dual-shell construction offers up to 150% more initial comfort while maintaining continuous force over time.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Trusted by Arizona Practices</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Switching to Tempe Align Solutions drastically lowered our lab bills without sacrificing quality. The AI setups are spot-on, and patients love the Zendura material comfort."</p>
+                    <div class="author">
+                        <div class="author-info">
+                            <h5>Dr. Sarah Jenkins</h5>
+                            <span>General Dentist, Scottsdale AZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The turnaround time is unbeatable. Knowing they are right here in the valley means I don't have to stress about delayed international shipping. My new go-to for moderate cases."</p>
+                    <div class="author">
+                        <div class="author-info">
+                            <h5>Dr. Michael Chen</h5>
+                            <span>Orthodontist, Tempe AZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Their per-case pricing structure is so easy to work with. No subscriptions, just fantastic communication, beautiful aligners, and great profit margins for my practice."</p>
+                    <div class="author">
+                        <div class="author-info">
+                            <h5>Dr. Amanda Ruiz</h5>
+                            <span>Cosmetic Dentist, Phoenix AZ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding about-section">
+        <div class="container about-content">
+            <h2>About Tempe Align Solutions</h2>
+            <p style="margin-top: 20px; font-size: 1.1rem; color: var(--text-muted);">
+                Rooted in the local innovation ecosystem near ASU, our team combines a deep background in biomedical engineering with advanced 3D digital dental design. We saw a gap in the market: local dentists were forced to choose between expensive big-name brands or slow, lower-quality overseas labs. 
+                <br><br>
+                Tempe Align Solutions was built to bridge that gap. By leveraging AI efficiency and partnering with certified labs to craft aligners from premium Zendura FLX, we empower Arizona practices to offer high-quality, profitable clear aligner therapy locally.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h2>Ready to Partner?</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">Book a quick demo or submit your first case free.</p>
+                    
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submission placeholder.');">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Dr. Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="practice">Practice Name</label>
+                            <input type="text" id="practice" class="form-control" placeholder="Valley Dental Care" required>
+                        </div>
+                        <div style="display: flex; gap: 20px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="doctor@practice.com" required>
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="(480) 555-0123">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" class="form-control" placeholder="I'm interested in learning more about your pricing..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <strong>Email:</strong><br>
+                        partners@tempealign.com
+                    </div>
+                    <div class="info-item">
+                        <strong>Phone:</strong><br>
+                        (480) 555-ALIGN
+                    </div>
+                    <div class="info-item">
+                        <strong>Lab Location:</strong><br>
+                        Tempe, AZ 85281<br>
+                        <em>Proudly serving the Greater Phoenix Area</em>
+                    </div>
+                    
+                    <div style="margin-top: 40px; display: flex; gap: 15px;">
+                        <a href="#" style="color: white; text-decoration: underline;">LinkedIn</a>
+                        <a href="#" style="color: white; text-decoration: underline;">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tempe Align Solutions. All rights reserved. | For Dental Professionals Only.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
