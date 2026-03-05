@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>SmileStraight – Clear Aligners for Dentists | Arizona</title>
-    <meta name="description" content="Affordable, high-quality clear aligners for Arizona dentists. Premium Zendura FLX material, precise digital design, and transparent per-case lab fees.">
-    <meta name="keywords" content="clear aligners for dentists Arizona, affordable Invisalign alternative Arizona, B2B clear aligners, Zendura FLX aligners, digital dentistry Arizona, dental lab Arizona">
+    <title>SmileStraight – Clear Aligners for Dentists</title>
+    <meta name="description" content="Affordable, high-quality clear aligners for dentists. Premium Zendura FLX material, precise digital design, and transparent per-case lab fees.">
+    <meta name="keywords" content="clear aligners for dentists, affordable Invisalign alternative, B2B clear aligners, Zendura FLX aligners, digital dentistry, dental lab">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +58,7 @@
             transition: var(--transition);
         }
 
+        /* Image bug fix: ensures images don't collapse if link breaks */
         img {
             max-width: 100%;
             height: auto;
@@ -208,11 +209,21 @@
             gap: 15px;
         }
 
+        /* Added robust CSS for image containers to prevent the layout bug */
         .hero-image {
             flex: 1;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background-color: var(--border);
+            min-height: 350px;
+            display: flex;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Benefits Section */
@@ -378,39 +389,6 @@
             gap: 15px;
         }
 
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background: var(--bg-light);
-            padding: 30px;
-            border-radius: 8px;
-            font-style: italic;
-        }
-
-        .author {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-style: normal;
-        }
-
-        .author-info h5 {
-            color: var(--secondary);
-            margin-bottom: 2px;
-        }
-
-        .author-info span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
         /* About Us */
         .about-section {
             background-color: var(--white);
@@ -564,7 +542,7 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>High-Quality Clear Aligners for Arizona Dentists</h1>
+                <h1>High-Quality Clear Aligners for Dentists</h1>
                 <p>Precise digital designs + premium Zendura FLX quality. Elevate your practice with our straightforward, per-case lab fees starting at just $250.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Submit Your First Case Free</a>
@@ -580,9 +558,9 @@
     <section id="benefits" class="section-padding">
         <div class="container">
             <h2 class="text-center">Why Partner With SmileStraight?</h2>
-            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">A fast, affordable, local alternative to big brands.</p>
+            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">A fast, affordable alternative to big brands.</p>
             
-            <div class="benefits-grid">
+            <div class="benefits-grid" style="justify-content: center;">
                 <div class="benefit-card">
                     <div class="icon-circle">3D</div>
                     <h3>Precision Digital Design</h3>
@@ -597,11 +575,6 @@
                     <div class="icon-circle">$</div>
                     <h3>Transparent Lab Fees</h3>
                     <p>Strictly per-case pricing. No subscription traps, no hidden fees. Maximizing your practice's profit margin on every patient.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon-circle">AZ</div>
-                    <h3>Local Arizona Turnaround</h3>
-                    <p>Based right here in Arizona. Skip the long international shipping times and get aligners in your patients' hands faster.</p>
                 </div>
             </div>
         </div>
@@ -619,7 +592,7 @@
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h4>Local Manufacturing</h4>
+                    <h4>Local Design & Manufacturing</h4>
                     <p>Once approved, we strictly utilize premium Zendura FLX material to 3D print and thermoform your case locally in Arizona.</p>
                 </div>
                 <div class="step">
@@ -668,7 +641,7 @@
                     </li>
                 </ul>
                 <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
-                    <p style="margin-bottom: 15px; color: var(--text-muted);">All cases include BlueSkyPlan setups and Zendura FLX material.</p>
+                    <p style="margin-bottom: 15px; color: var(--text-muted);">All cases include digital setups and Zendura FLX material.</p>
                     <a href="#contact" class="btn btn-primary">Request Full Fee Schedule</a>
                 </div>
             </div>
@@ -678,7 +651,7 @@
     <section id="technology" class="section-padding tech-section">
         <div class="container tech-content">
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1598331668826-20cefac91e48?auto=format&fit=crop&w=800&q=80" alt="Clear aligners and digital dental scan">
+                <img src="https://images.unsplash.com/photo-1609590925018-b11b98436b77?auto=format&fit=crop&w=800&q=80" alt="Clear aligners and digital dental scan">
             </div>
             <div class="tech-text">
                 <h2>Cutting-Edge Tech Meets Premium Materials</h2>
@@ -704,49 +677,13 @@
         </div>
     </section>
 
-    <section id="testimonials" class="section-padding">
-        <div class="container">
-            <h2 class="text-center">Trusted by Arizona Practices</h2>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Switching to SmileStraight drastically lowered our lab bills without sacrificing quality. The digital setups are spot-on, and patients love the Zendura material comfort."</p>
-                    <div class="author">
-                        <div class="author-info">
-                            <h5>Dr. Sarah Jenkins</h5>
-                            <span>General Dentist, Scottsdale AZ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"The turnaround time is unbeatable. Knowing they are right here in the state means I don't have to stress about delayed shipping. My new go-to lab."</p>
-                    <div class="author">
-                        <div class="author-info">
-                            <h5>Dr. Michael Chen</h5>
-                            <span>Orthodontist, Tempe AZ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Their per-case lab fee structure is exactly what I was looking for. No subscriptions, just fantastic communication, beautiful aligners, and great profit margins."</p>
-                    <div class="author">
-                        <div class="author-info">
-                            <h5>Dr. Amanda Ruiz</h5>
-                            <span>Cosmetic Dentist, Phoenix AZ</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="about" class="section-padding about-section">
         <div class="container about-content">
             <h2>About SmileStraight</h2>
             <p style="margin-top: 20px; font-size: 1.1rem; color: var(--text-muted);">
-                Rooted in the local innovation ecosystem near ASU, our team combines a deep background in biomedical engineering with advanced 3D digital dental design. We saw a gap in the market: local dentists were forced to choose between expensive big-name brands or slow, lower-quality overseas labs. 
+                Rooted in the innovation ecosystem, our team combines a deep background in biomedical engineering with advanced 3D digital dental design. We saw a gap in the market: dentists were forced to choose between expensive big-name brands or slow, lower-quality overseas labs. 
                 <br><br>
-                SmileStraight was built to bridge that gap. By leveraging digital workflow efficiency and partnering with certified labs to craft aligners from premium Zendura FLX, we empower Arizona practices to offer high-quality, profitable clear aligner therapy locally.
+                SmileStraight was built to bridge that gap. By leveraging digital workflow efficiency and partnering with certified labs to craft aligners from premium Zendura FLX, we empower practices to offer high-quality, profitable clear aligner therapy.
             </p>
         </div>
     </section>
