@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Tempe Align Solutions – AI Clear Aligners for Dentists | Tempe, AZ</title>
-    <meta name="description" content="Affordable, AI-powered clear aligners for Arizona dentists. High-quality Zendura FLX material, BlueSkyPlan AI design, and flexible per-case pricing.">
-    <meta name="keywords" content="clear aligners for dentists Arizona, affordable Invisalign alternative Tempe, B2B clear aligners, Zendura FLX aligners, digital dentistry Arizona, dental lab Tempe">
+    <title>SmileStraight – Clear Aligners for Dentists | Arizona</title>
+    <meta name="description" content="Affordable, high-quality clear aligners for Arizona dentists. Premium Zendura FLX material, precise digital design, and transparent per-case lab fees.">
+    <meta name="keywords" content="clear aligners for dentists Arizona, affordable Invisalign alternative Arizona, B2B clear aligners, Zendura FLX aligners, digital dentistry Arizona, dental lab Arizona">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -264,14 +264,15 @@
 
         .steps-container {
             display: flex;
-            justify-content: space-between;
-            gap: 20px;
+            justify-content: center;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
         .step {
             flex: 1;
-            min-width: 200px;
+            min-width: 250px;
+            max-width: 300px;
             text-align: center;
             position: relative;
         }
@@ -302,73 +303,52 @@
             font-size: 0.9rem;
         }
 
-        /* Pricing Section */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
+        /* Pricing Section - Lab Fee Style */
         .pricing-card {
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 40px 30px;
-            text-align: center;
+            padding: 40px;
             background: var(--white);
-            position: relative;
-        }
-
-        .pricing-card.popular {
-            border: 2px solid var(--primary);
-            transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 40px auto 0;
         }
 
-        .popular-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: var(--white);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin: 20px 0;
-        }
-
-        .price span {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .pricing-features {
+        .fee-schedule {
             list-style: none;
-            margin: 20px 0 30px;
-            text-align: left;
+            margin: 20px 0;
+            padding: 0;
         }
 
-        .pricing-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--bg-light);
+        .fee-schedule li {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--bg-light);
+            font-size: 1.1rem;
         }
 
-        .pricing-features li::before {
-            content: "✓";
+        .fee-schedule li:last-child {
+            border-bottom: none;
+        }
+
+        .fee-schedule li strong {
+            color: var(--secondary);
+        }
+
+        .fee-price {
+            font-weight: 700;
             color: var(--primary);
-            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .fee-note {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            margin-top: 4px;
         }
 
         /* Tech & Materials */
@@ -516,7 +496,6 @@
         /* Responsive Design */
         @media (max-width: 1024px) {
             .hero-text h1 { font-size: 2.5rem; }
-            .pricing-card.popular { transform: none; }
         }
 
         @media (max-width: 768px) {
@@ -548,8 +527,14 @@
 
             .hero-text { text-align: center; }
             .hero-buttons { justify-content: center; }
-            .steps-container { flex-direction: column; gap: 40px; }
+            .steps-container { flex-direction: column; align-items: center; gap: 40px; }
             .contact-form, .contact-info { padding: 30px; }
+            
+            .fee-schedule li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -557,7 +542,7 @@
 
     <header>
         <div class="container nav-container">
-            <div class="logo">Tempe<span>Align</span></div>
+            <div class="logo">Smile<span>Straight</span></div>
             
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger">
@@ -569,9 +554,9 @@
             <ul class="nav-links">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#pricing">Lab Fees</a></li>
                 <li><a href="#technology">Materials</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="color: white;">Book Demo</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="color: white;">Send a Case</a></li>
             </ul>
         </div>
     </header>
@@ -579,11 +564,11 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Affordable, AI-Powered Clear Aligners for Arizona Dentists</h1>
-                <p>Fast AI designs powered by BlueSkyPlan + premium Zendura FLX quality. Elevate your practice with our flexible, per-case pricing starting at just $250.</p>
+                <h1>High-Quality Clear Aligners for Arizona Dentists</h1>
+                <p>Precise digital designs + premium Zendura FLX quality. Elevate your practice with our straightforward, per-case lab fees starting at just $250.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Submit Your First Case Free</a>
-                    <a href="#pricing" class="btn btn-outline">See Pricing</a>
+                    <a href="#pricing" class="btn btn-outline">View Lab Fees</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -594,14 +579,14 @@
 
     <section id="benefits" class="section-padding">
         <div class="container">
-            <h2 class="text-center">Why Partner With Tempe Align Solutions?</h2>
+            <h2 class="text-center">Why Partner With SmileStraight?</h2>
             <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">A fast, affordable, local alternative to big brands.</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="icon-circle">AI</div>
-                    <h3>Accelerated AI Design</h3>
-                    <p>Setup approvals ready in hours, not days. We leverage BlueSkyPlan AI for highly accurate, predictable tooth movements.</p>
+                    <div class="icon-circle">3D</div>
+                    <h3>Precision Digital Design</h3>
+                    <p>Setup approvals ready in hours, not days. We leverage advanced 3D software for highly accurate, predictable tooth movements.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon-circle">Z</div>
@@ -610,12 +595,12 @@
                 </div>
                 <div class="benefit-card">
                     <div class="icon-circle">$</div>
-                    <h3>Flexible B2B Pricing</h3>
-                    <p>Strictly per-case or tiered pricing. No subscription traps, no hidden lab fees. Maximizing your practice's profit margin.</p>
+                    <h3>Transparent Lab Fees</h3>
+                    <p>Strictly per-case pricing. No subscription traps, no hidden fees. Maximizing your practice's profit margin on every patient.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon-circle">AZ</div>
-                    <h3>Local Tempe Turnaround</h3>
+                    <h3>Local Arizona Turnaround</h3>
                     <p>Based right here in Arizona. Skip the long international shipping times and get aligners in your patients' hands faster.</p>
                 </div>
             </div>
@@ -624,28 +609,23 @@
 
     <section id="how-it-works" class="section-padding how-it-works">
         <div class="container">
-            <h2 class="text-center">Streamlined Clinical Workflow</h2>
+            <h2 class="text-center">Streamlined Workflow</h2>
             
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h4>Submit Scans & Rx</h4>
-                    <p>Upload your STL files, patient photos, and treatment goals through our secure portal.</p>
+                    <h4>Submit Scans</h4>
+                    <p>Upload your STL files, patient photos, and treatment goals securely. Review and approve the digital treatment plan we send back.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h4>AI Generates Setup</h4>
-                    <p>Review and approve the 3D digital treatment plan sent directly to your inbox.</p>
+                    <h4>Local Manufacturing</h4>
+                    <p>Once approved, we strictly utilize premium Zendura FLX material to 3D print and thermoform your case locally in Arizona.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h4>Local Manufacturing</h4>
-                    <p>We 3D print and thermoform using premium Zendura FLX in our certified lab network.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
                     <h4>Fast Delivery</h4>
-                    <p>Receive beautifully packaged, ready-to-deliver aligners right at your Arizona practice.</p>
+                    <p>Receive beautifully packaged, quality-checked, and ready-to-deliver aligners directly at your practice.</p>
                 </div>
             </div>
         </div>
@@ -653,52 +633,44 @@
 
     <section id="pricing" class="section-padding">
         <div class="container">
-            <h2 class="text-center">Transparent, Per-Case Pricing</h2>
-            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">High-quality clinical outcomes without the premium brand markup.</p>
+            <h2 class="text-center">Standard Lab Fee Schedule</h2>
+            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">Straightforward pricing with no subscriptions, tiers, or surprises.</p>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Mild Case</h3>
-                    <p style="color: var(--text-muted);">Up to 10 aligners per arch</p>
-                    <div class="price">$250<span>/case</span></div>
-                    <ul class="pricing-features">
-                        <li>BlueSkyPlan AI Setup</li>
-                        <li>Zendura FLX Material</li>
-                        <li>1 Free Refinement</li>
-                        <li>Local AZ Shipping</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Select Mild</a>
+            <div class="pricing-card">
+                <ul class="fee-schedule">
+                    <li>
+                        <div>
+                            <strong>Mild Case</strong>
+                            <span class="fee-note">Up to 10 aligners per arch. Includes 1 refinement.</span>
+                        </div>
+                        <div class="fee-price">$250 / case</div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Moderate Case</strong>
+                            <span class="fee-note">Up to 20 aligners per arch. Includes 2 refinements.</span>
+                        </div>
+                        <div class="fee-price">$400 / case</div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Comprehensive Case</strong>
+                            <span class="fee-note">Unlimited aligners. Includes unlimited refinements for 3 years.</span>
+                        </div>
+                        <div class="fee-price">$600 / case</div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Replacement Aligner / Retainer</strong>
+                            <span class="fee-note">Printed on-demand from existing scans.</span>
+                        </div>
+                        <div class="fee-price">$40 / arch</div>
+                    </li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
+                    <p style="margin-bottom: 15px; color: var(--text-muted);">All cases include BlueSkyPlan setups and Zendura FLX material.</p>
+                    <a href="#contact" class="btn btn-primary">Request Full Fee Schedule</a>
                 </div>
-                
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Moderate Case</h3>
-                    <p style="color: var(--text-muted);">Up to 20 aligners per arch</p>
-                    <div class="price">$400<span>/case</span></div>
-                    <ul class="pricing-features">
-                        <li>BlueSkyPlan AI Setup</li>
-                        <li>Zendura FLX Material</li>
-                        <li>2 Free Refinements</li>
-                        <li>Local AZ Shipping</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Moderate</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Comprehensive</h3>
-                    <p style="color: var(--text-muted);">Unlimited aligners</p>
-                    <div class="price">$600<span>/case</span></div>
-                    <ul class="pricing-features">
-                        <li>BlueSkyPlan AI Setup</li>
-                        <li>Zendura FLX Material</li>
-                        <li>Unlimited Refinements (3 yrs)</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Select Comprehensive</a>
-                </div>
-            </div>
-            <div class="text-center" style="margin-top: 40px;">
-                <p>Need volume discounts or a custom workflow? <a href="#contact">Contact us for a custom quote.</a></p>
             </div>
         </div>
     </section>
@@ -716,8 +688,8 @@
                     <li>
                         <div class="icon-circle" style="width: 40px; height: 40px; font-size: 1rem; margin: 0;">1</div>
                         <div>
-                            <h4>BlueSkyPlan AI Integration</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Automated, highly accurate tooth segmentation and staging ensures safe, biomechanically sound movement plans in record time.</p>
+                            <h4>Advanced Treatment Planning</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Highly accurate tooth segmentation and staging ensures safe, biomechanically sound movement plans in record time using BlueSkyPlan.</p>
                         </div>
                     </li>
                     <li>
@@ -738,7 +710,7 @@
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p>"Switching to Tempe Align Solutions drastically lowered our lab bills without sacrificing quality. The AI setups are spot-on, and patients love the Zendura material comfort."</p>
+                    <p>"Switching to SmileStraight drastically lowered our lab bills without sacrificing quality. The digital setups are spot-on, and patients love the Zendura material comfort."</p>
                     <div class="author">
                         <div class="author-info">
                             <h5>Dr. Sarah Jenkins</h5>
@@ -747,7 +719,7 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"The turnaround time is unbeatable. Knowing they are right here in the valley means I don't have to stress about delayed international shipping. My new go-to for moderate cases."</p>
+                    <p>"The turnaround time is unbeatable. Knowing they are right here in the state means I don't have to stress about delayed shipping. My new go-to lab."</p>
                     <div class="author">
                         <div class="author-info">
                             <h5>Dr. Michael Chen</h5>
@@ -756,7 +728,7 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Their per-case pricing structure is so easy to work with. No subscriptions, just fantastic communication, beautiful aligners, and great profit margins for my practice."</p>
+                    <p>"Their per-case lab fee structure is exactly what I was looking for. No subscriptions, just fantastic communication, beautiful aligners, and great profit margins."</p>
                     <div class="author">
                         <div class="author-info">
                             <h5>Dr. Amanda Ruiz</h5>
@@ -770,11 +742,11 @@
 
     <section id="about" class="section-padding about-section">
         <div class="container about-content">
-            <h2>About Tempe Align Solutions</h2>
+            <h2>About SmileStraight</h2>
             <p style="margin-top: 20px; font-size: 1.1rem; color: var(--text-muted);">
                 Rooted in the local innovation ecosystem near ASU, our team combines a deep background in biomedical engineering with advanced 3D digital dental design. We saw a gap in the market: local dentists were forced to choose between expensive big-name brands or slow, lower-quality overseas labs. 
                 <br><br>
-                Tempe Align Solutions was built to bridge that gap. By leveraging AI efficiency and partnering with certified labs to craft aligners from premium Zendura FLX, we empower Arizona practices to offer high-quality, profitable clear aligner therapy locally.
+                SmileStraight was built to bridge that gap. By leveraging digital workflow efficiency and partnering with certified labs to craft aligners from premium Zendura FLX, we empower Arizona practices to offer high-quality, profitable clear aligner therapy locally.
             </p>
         </div>
     </section>
@@ -784,7 +756,7 @@
             <div class="contact-container">
                 <div class="contact-form">
                     <h2>Ready to Partner?</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 30px;">Book a quick demo or submit your first case free.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">Send us a message to request a full fee schedule or submit your first case free.</p>
                     
                     <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submission placeholder.');">
                         <div class="form-group">
@@ -807,7 +779,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="4" class="form-control" placeholder="I'm interested in learning more about your pricing..."></textarea>
+                            <textarea id="message" rows="4" class="form-control" placeholder="I'm interested in learning more about your lab fees..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
@@ -817,16 +789,16 @@
                     <h3>Contact Information</h3>
                     <div class="info-item">
                         <strong>Email:</strong><br>
-                        partners@tempealign.com
+                        smilistraightaligners@outlook.com
                     </div>
                     <div class="info-item">
                         <strong>Phone:</strong><br>
-                        (480) 555-ALIGN
+                        (657) 731-7339
                     </div>
                     <div class="info-item">
-                        <strong>Lab Location:</strong><br>
-                        Tempe, AZ 85281<br>
-                        <em>Proudly serving the Greater Phoenix Area</em>
+                        <strong>Location:</strong><br>
+                        Arizona<br>
+                        <em>Proudly serving the Greater Phoenix Area and beyond</em>
                     </div>
                     
                     <div style="margin-top: 40px; display: flex; gap: 15px;">
@@ -840,7 +812,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Tempe Align Solutions. All rights reserved. | For Dental Professionals Only.</p>
+            <p>&copy; 2026 SmileStraight. All rights reserved. | For Dental Professionals Only.</p>
         </div>
     </footer>
 
