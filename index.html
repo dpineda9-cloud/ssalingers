@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>SmileStraight – Turnkey Clear Aligners for Dentists</title>
-    <meta name="description" content="Scale your clear aligner production with zero extra chair time. Expert digital design, direct-to-patient shipping, and remote monitoring for Arizona dentists.">
-    <meta name="keywords" content="clear aligners for dentists, direct to patient aligners, remote patient monitoring dentistry, Zendura FLX aligners, digital dentistry, dental lab Arizona">
+    <title>SmileStraight – Hybrid Clear Aligner Logistics for Dentists</title>
+    <meta name="description" content="The smartest way to scale aligner cases. In-office starts, AI-monitored finishes, and 50% lower lab fees for Arizona dentists.">
+    <meta name="keywords" content="clear aligners for dentists, hybrid aligner model, Blue Sky Plan design, dental remote monitoring, Zendura FLX aligners, Arizona dental lab">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS Variables for easy theming */
         :root {
-            --primary: #007B8F; /* Teal */
+            --primary: #007B8F; 
             --primary-hover: #005F6E;
-            --secondary: #0A2540; /* Navy */
-            --accent: #E0F2F1; /* Light mint/teal */
+            --secondary: #0A2540; 
+            --accent: #E0F2F1; 
             --bg-light: #F8FAFC;
             --text-main: #334155;
             --text-muted: #64748B;
@@ -28,491 +27,80 @@
             --transition: all 0.3s ease;
         }
 
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        html {
-            scroll-behavior: smooth;
-            font-family: var(--font-main);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        body {
-            background-color: var(--white);
-        }
-
-        h1, h2, h3, h4 {
-            color: var(--secondary);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--primary);
-            transition: var(--transition);
-        }
-
-        /* Image bug fix: ensures images don't collapse if link breaks */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-hover);
-            color: var(--white);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        /* Navigation */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* CSS-Only Mobile Menu */
-        .menu-toggle {
-            display: none;
-        }
-        
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-        }
-        
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: var(--secondary);
-            transition: var(--transition);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 140px;
-            padding-bottom: 80px;
-            background: linear-gradient(135deg, var(--bg-light) 0%, var(--accent) 100%);
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        /* Added robust CSS for image containers to prevent the layout bug */
-        .hero-image {
-            flex: 1;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            background-color: var(--border);
-            min-height: 350px;
-            display: flex;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Benefits Section */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .benefit-card {
-            background: var(--bg-light);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s;
-            border: 1px solid var(--border);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .icon-circle {
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent);
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            background-color: var(--secondary);
-            color: var(--white);
-        }
-
-        .how-it-works h2 {
-            color: var(--white);
-            margin-bottom: 50px;
-        }
-
-        .steps-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-            z-index: 2;
-            position: relative;
-        }
-
-        .step h4 {
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-
-        .step p {
-            color: #94A3B8;
-            font-size: 0.9rem;
-        }
-
-        /* Pricing Section - Lab Fee Style */
-        .pricing-card {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 40px;
-            background: var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 700px;
-            margin: 40px auto 0;
-        }
-
-        .fee-schedule {
-            list-style: none;
-            margin: 20px 0;
-            padding: 0;
-        }
-
-        .fee-schedule li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid var(--bg-light);
-            font-size: 1.1rem;
-        }
-
-        .fee-schedule li:last-child {
-            border-bottom: none;
-        }
-
-        .fee-schedule li strong {
-            color: var(--secondary);
-        }
-
-        .fee-price {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .fee-note {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: normal;
-            margin-top: 4px;
-        }
-
-        /* Tech & Materials */
-        .tech-section {
-            background-color: var(--bg-light);
-        }
-
-        .tech-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .tech-text {
-            flex: 1;
-        }
-
-        .tech-text ul {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .tech-text li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        /* About Us */
-        .about-section {
-            background-color: var(--white);
-        }
-        
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* Contact & Footer */
-        .contact-section {
-            background-color: var(--bg-light);
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 50px;
-            background: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .contact-form {
-            flex: 1;
-            padding: 50px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-family: var(--font-main);
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--accent);
-        }
-
-        .contact-info {
-            flex: 1;
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .contact-info h3 {
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-
-        .info-item {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #051626;
-            color: #94A3B8;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-text h1 { font-size: 2.5rem; }
-        }
+        html { scroll-behavior: smooth; font-family: var(--font-main); color: var(--text-main); line-height: 1.6; }
+        body { background-color: var(--white); }
+        h1, h2, h3, h4 { color: var(--secondary); font-weight: 700; line-height: 1.2; }
+        a { text-decoration: none; color: var(--primary); transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+
+        .btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: var(--transition); border: none; }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .btn-primary:hover { background-color: var(--primary-hover); color: var(--white); }
+        .btn-outline { background-color: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
+
+        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+        .menu-toggle { display: none; }
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--secondary); }
+
+        .hero { padding-top: 140px; padding-bottom: 80px; background: linear-gradient(135deg, var(--bg-light) 0%, var(--accent) 100%); }
+        .hero-content { display: flex; align-items: center; gap: 50px; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero-text p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 30px; }
+        .hero-buttons { display: flex; gap: 15px; }
+        .hero-image { flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); background-color: var(--border); min-height: 350px; display: flex; }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .benefit-card { background: var(--bg-light); padding: 30px; border-radius: 8px; text-align: center; border: 1px solid var(--border); transition: var(--transition); }
+        .benefit-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .icon-circle { width: 60px; height: 60px; background-color: var(--accent); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px; }
+
+        .how-it-works { background-color: var(--secondary); color: var(--white); }
+        .how-it-works h2 { color: var(--white); margin-bottom: 50px; }
+        .steps-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .step { flex: 1; min-width: 250px; max-width: 300px; text-align: center; }
+        .step-number { width: 50px; height: 50px; background-color: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px; }
+        .step h4 { color: var(--white); margin-bottom: 10px; }
+        .step p { color: #94A3B8; font-size: 0.9rem; }
+
+        .pricing-card { border: 1px solid var(--border); border-radius: 8px; padding: 40px; background: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 750px; margin: 40px auto 0; }
+        .fee-schedule { list-style: none; margin: 20px 0; padding: 0; }
+        .fee-schedule li { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--bg-light); }
+        .fee-price { font-weight: 700; color: var(--primary); font-size: 1.3rem; }
+        .fee-note { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px; }
+
+        .tech-section { background-color: var(--bg-light); }
+        .tech-content { display: flex; align-items: center; gap: 50px; }
+        .tech-text { flex: 1; }
+        .tech-text ul { list-style: none; margin-top: 20px; }
+        .tech-text li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px; }
+
+        .contact-container { display: flex; gap: 50px; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .contact-form { flex: 1; padding: 50px; }
+        .form-group { margin-bottom: 20px; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; }
+        .contact-info { flex: 1; background-color: var(--secondary); color: var(--white); padding: 50px; }
+        footer { background-color: #051626; color: #94A3B8; padding: 30px 0; text-align: center; }
 
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-            
-            .nav-links {
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                flex-direction: column;
-                padding: 20px 0;
-                box-shadow: 0 10px 10px rgba(0,0,0,0.05);
-                transform: translateY(-150%);
-                opacity: 0;
-                transition: var(--transition);
-                z-index: -1;
-            }
-
-            .menu-toggle:checked ~ .nav-links {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            .hero-content, .tech-content, .contact-container {
-                flex-direction: column;
-            }
-
+            .nav-links { position: absolute; top: 80px; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 20px 0; transform: translateY(-150%); opacity: 0; transition: var(--transition); }
+            .menu-toggle:checked ~ .nav-links { transform: translateY(0); opacity: 1; }
+            .hero-content, .tech-content, .contact-container { flex-direction: column; }
             .hero-text { text-align: center; }
             .hero-buttons { justify-content: center; }
-            .steps-container { flex-direction: column; align-items: center; gap: 40px; }
-            .contact-form, .contact-info { padding: 30px; }
-            
-            .fee-schedule li {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
         }
     </style>
 </head>
@@ -521,20 +109,15 @@
     <header>
         <div class="container nav-container">
             <div class="logo">Smile<span>Straight</span></div>
-            
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </label>
-
             <ul class="nav-links">
-                <li><a href="#benefits">The Value</a></li>
+                <li><a href="#benefits">The Model</a></li>
                 <li><a href="#how-it-works">Workflow</a></li>
                 <li><a href="#pricing">Lab Fees</a></li>
-                <li><a href="#technology">Tech & Materials</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="color: white;">Send a Case</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="color: white;">Get Started</a></li>
             </ul>
         </div>
     </header>
@@ -542,39 +125,37 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Scale Your Aligner Cases. Zero Extra Chair Time.</h1>
-                <p>We combine expert digital design, remote patient monitoring, and direct-to-patient blind shipping. We handle the logistics so you can focus entirely on clinical outcomes.</p>
+                <h1>High-Margin Aligners. <br>Hybrid Fulfillment.</h1>
+                <p>Retain clinical control with in-office starts, then scale effortlessly with direct-to-patient logistics and AI monitoring. 50% lower lab fees than the big brands.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Submit Your First Case Free</a>
-                    <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+                    <a href="#contact" class="btn btn-primary">Free Digital Setup</a>
+                    <a href="#how-it-works" class="btn btn-outline">View Hybrid Workflow</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Modern dental office with digital dentistry equipment">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Digital Aligner Workflow">
             </div>
         </div>
     </section>
 
     <section id="benefits" class="section-padding">
         <div class="container">
-            <h2 class="text-center">A Turnkey Solution Designed for Doctor Efficiency</h2>
-            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">More profit per case. Fewer in-office appointments.</p>
-            
-            <div class="benefits-grid" style="justify-content: center;">
+            <h2 class="text-center">Engineered for the Modern Practice</h2>
+            <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="icon-circle">3D</div>
-                    <h3>Biomechanical Design</h3>
-                    <p>Setup approvals ready in hours. We leverage advanced 3D software to create highly accurate, predictable tooth movements tailored to your clinical preferences.</p>
+                    <div class="icon-circle">BSP</div>
+                    <h3>Precision Design</h3>
+                    <p>Expert Blue Sky Plan designs tailored to your clinical specs. We handle tooth segmentation, attachments, and IPR planning so you don't have to.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="icon-circle">📦</div>
-                    <h3>Direct-to-Patient Delivery</h3>
-                    <p>Eliminate unnecessary delivery appointments. We blind-ship the beautifully packaged, quality-checked aligners directly to your patient's doorstep under your clinic's name.</p>
+                    <div class="icon-circle">🔄</div>
+                    <h3>The Hybrid Advantage</h3>
+                    <p>We ship the first 5 trays to your office for attachment bonding. Once tracking is confirmed, we dropship the remaining trays to the patient.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="icon-circle">📲</div>
-                    <h3>Remote Monitoring</h3>
-                    <p>Track compliance and tooth tracking digitally. Reduce your physical chair time by managing check-ins and progress remotely, only bringing patients in when necessary.</p>
+                    <div class="icon-circle">🤖</div>
+                    <h3>AI Monitoring</h3>
+                    <p>Reduce check-ins to just one mid-treatment visit. Our AI-driven remote monitoring keeps you updated on patient compliance digitally.</p>
                 </div>
             </div>
         </div>
@@ -582,23 +163,22 @@
 
     <section id="how-it-works" class="section-padding how-it-works">
         <div class="container">
-            <h2 class="text-center">The SmileStraight Workflow</h2>
-            
+            <h2 class="text-center">The SmileStraight Hybrid Loop</h2>
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h4>Intake & Design</h4>
-                    <p>Upload your STL files and patient goals securely. Review and approve the custom digital treatment plan we send back within 24 hours.</p>
+                    <h4>Digital Design</h4>
+                    <p>Upload STLs. We use Blue Sky Plan to create a 3D simulation. You review and approve the final clinical movements.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h4>Premium Fabrication</h4>
-                    <p>Once approved, we strictly utilize premium Zendura FLX dual-shell material to 3D print and thermoform your case to exact specifications.</p>
+                    <h4>Clinical Start</h4>
+                    <p>Aligners 1-5 arrive at your clinic. You bond attachments, perform IPR, and ensure a perfect fit for the patient.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h4>Ship & Monitor</h4>
-                    <p>We ship directly to your patient's home. You manage their progress through remote monitoring, intervening in-clinic only when clinically required.</p>
+                    <h4>Automated Finish</h4>
+                    <p>Remaining trays are dropshipped to the patient. You monitor progress via the app and see them once for a final check.</p>
                 </div>
             </div>
         </div>
@@ -606,43 +186,34 @@
 
     <section id="pricing" class="section-padding">
         <div class="container">
-            <h2 class="text-center">Standard Lab Fee Schedule</h2>
-            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">Straightforward pricing with no subscriptions, tiers, or surprises.</p>
-            
+            <h2 class="text-center">Transparent Lab Fees</h2>
+            <p class="text-center" style="color: var(--text-muted); margin-top: 10px;">Monitoring and fulfillment included. No hidden costs.</p>
             <div class="pricing-card">
                 <ul class="fee-schedule">
                     <li>
                         <div>
-                            <strong>Mild Case</strong>
-                            <span class="fee-note">Up to 10 aligners per arch. Includes 1 refinement.</span>
-                        </div>
-                        <div class="fee-price">$250 / case</div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>Moderate Case</strong>
-                            <span class="fee-note">Up to 20 aligners per arch. Includes 2 refinements.</span>
+                            <strong>Express Case</strong>
+                            <span class="fee-note">Up to 10 aligners. Perfect for minor crowding or relapses.</span>
                         </div>
                         <div class="fee-price">$400 / case</div>
                     </li>
                     <li>
                         <div>
-                            <strong>Comprehensive Case</strong>
-                            <span class="fee-note">Unlimited aligners. Includes unlimited refinements for 3 years.</span>
+                            <strong>Moderate Case</strong>
+                            <span class="fee-note">Up to 20 aligners. The standard for most adult orthodontic needs.</span>
                         </div>
-                        <div class="fee-price">$600 / case</div>
+                        <div class="fee-price">$700 / case</div>
                     </li>
                     <li>
                         <div>
-                            <strong>Replacement Aligner / Retainer</strong>
-                            <span class="fee-note">Printed on-demand and shipped direct to patient.</span>
+                            <strong>Comprehensive</strong>
+                            <span class="fee-note">Unlimited aligners. Full correction with 3 years of refinements.</span>
                         </div>
-                        <div class="fee-price">$40 / arch</div>
+                        <div class="fee-price">$1,200 / case</div>
                     </li>
                 </ul>
                 <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
-                    <p style="margin-bottom: 15px; color: var(--text-muted);">All cases include digital setups, Zendura FLX material, and direct-to-patient fulfillment options.</p>
-                    <a href="#contact" class="btn btn-primary">Request Full Fee Schedule</a>
+                    <p style="color: var(--text-muted);">Increase your margins by 50% compared to national providers while offering a more convenient patient experience.</p>
                 </div>
             </div>
         </div>
@@ -651,40 +222,16 @@
     <section id="technology" class="section-padding tech-section">
         <div class="container tech-content">
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1609590925018-b11b98436b77?auto=format&fit=crop&w=800&q=80" alt="Clear aligners and digital dental scan">
+                <img src="https://images.unsplash.com/photo-1609590925018-b11b98436b77?auto=format&fit=crop&w=800&q=80" alt="Zendura FLX Material">
             </div>
             <div class="tech-text">
-                <h2>Cutting-Edge Tech Meets Premium Materials</h2>
-                <p style="margin-top: 20px;">We don't compromise on clinical quality. By pairing the smartest digital dentistry software with top-tier thermoforming plastics and connected patient apps, we ensure predictable, profitable results.</p>
-                
+                <h2>Clinical Grade Materials</h2>
+                <p>We utilize Zendura™ FLX premium dual-shell material for every case, providing high initial force and long-term comfort.</p>
                 <ul>
-                    <li>
-                        <div class="icon-circle" style="width: 40px; height: 40px; font-size: 1rem; margin: 0;">1</div>
-                        <div>
-                            <h4>Advanced Treatment Planning</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Highly accurate tooth segmentation and staging ensures safe, biomechanically sound movement plans using industry-leading software like BlueSkyPlan.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-circle" style="width: 40px; height: 40px; font-size: 1rem; margin: 0;">2</div>
-                        <div>
-                            <h4>Zendura™ FLX Premium Material</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">The gold standard in clear aligner materials. Its dual-shell construction offers up to 150% more initial comfort while maintaining continuous force over time.</p>
-                        </div>
-                    </li>
+                    <li><strong>Blue Sky Plan Ecosystem:</strong> Open-platform design that allows for custom attachment shapes and complex staging.</li>
+                    <li><strong>Tijuana Manufacturing:</strong> Our partner facility in TJ provides rapid turnaround and overnight shipping to the Arizona market.</li>
                 </ul>
             </div>
-        </div>
-    </section>
-
-    <section id="about" class="section-padding about-section">
-        <div class="container about-content">
-            <h2>About SmileStraight</h2>
-            <p style="margin-top: 20px; font-size: 1.1rem; color: var(--text-muted);">
-                Rooted in the innovation ecosystem of Arizona State University, our team combines a rigorous background in biomedical engineering with advanced 3D digital dental design. We saw a critical bottleneck in the clear aligner market: doctors were losing too much money on chair time, or sacrificing quality with cheap overseas labs.
-                <br><br>
-                SmileStraight was built to solve this. By integrating expert digital setups with remote patient monitoring and direct-to-patient fulfillment, we are transforming clear aligners from a high-maintenance procedure into a streamlined, highly profitable vertical for your practice.
-            </p>
         </div>
     </section>
 
@@ -692,65 +239,26 @@
         <div class="container">
             <div class="contact-container">
                 <div class="contact-form">
-                    <h2>Ready to Scale Your Cases?</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 30px;">Send us a message to discuss our direct-to-patient fulfillment model or submit your first case free.</p>
-                    
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submission placeholder.');">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Dr. Jane Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="practice">Practice Name</label>
-                            <input type="text" id="practice" class="form-control" placeholder="Valley Dental Care" required>
-                        </div>
-                        <div style="display: flex; gap: 20px;">
-                            <div class="form-group" style="flex: 1;">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="doctor@practice.com" required>
-                            </div>
-                            <div class="form-group" style="flex: 1;">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" class="form-control" placeholder="(480) 555-0123">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="4" class="form-control" placeholder="I'm interested in learning more about reducing my chair time with your lab..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <h2>Ready to Scale?</h2>
+                    <form action="#" method="POST">
+                        <div class="form-group"><label>Full Name</label><input type="text" class="form-control" placeholder="Dr. Doe" required></div>
+                        <div class="form-group"><label>Practice Name</label><input type="text" class="form-control" placeholder="Scottsdale Dental" required></div>
+                        <div class="form-group"><label>Email</label><input type="email" class="form-control" required></div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Schedule a Demo</button>
                     </form>
                 </div>
-                
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="info-item">
-                        <strong>Email:</strong><br>
-                        smilistraightaligners@outlook.com
-                    </div>
-                    <div class="info-item">
-                        <strong>Phone:</strong><br>
-                        (657) 731-7339
-                    </div>
-                    <div class="info-item">
-                        <strong>Location:</strong><br>
-                        Arizona<br>
-                        <em>Proudly serving the Greater Phoenix Area and beyond</em>
-                    </div>
-                    
-                    <div style="margin-top: 40px; display: flex; gap: 15px;">
-                        <a href="#" style="color: white; text-decoration: underline;">LinkedIn</a>
-                        <a href="#" style="color: white; text-decoration: underline;">Instagram</a>
-                    </div>
+                    <h3>Direct Contact</h3>
+                    <p>smilistraightaligners@outlook.com</p>
+                    <p>(657) 731-7339</p>
+                    <p style="margin-top: 20px;"><strong>Serving Tempe, Scottsdale, and the Greater Phoenix Area.</strong></p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 SmileStraight. All rights reserved. | For Dental Professionals Only.</p>
-        </div>
+        <div class="container"><p>&copy; 2026 SmileStraight. Built for Arizona Dental Professionals.</p></div>
     </footer>
 
 </body>
